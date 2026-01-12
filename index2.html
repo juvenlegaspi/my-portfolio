@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juven Legaspi – Software Developer Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #1e90ff;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #0d6efd;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1e90ff, #0d6efd);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+
+    /* PDF Button */
+    .pdf-button {
+      display: block;
+      width: 200px;
+      margin: 1rem auto 2rem;
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      color: white;
+      background-color: #0d6efd;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .pdf-button:hover {
+      background-color: #1e90ff;
+      transform: translateY(-2px);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+    }
+
+    /* Section Headers */
+    h2 {
+      color: #0d6efd;
+      border-bottom: 3px solid #0d6efd;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+
+    /* Project Card */
+    .project {
+      background-color: white;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .project h3 {
+      margin-top: 0;
+      color: #0d6efd;
+    }
+    .project ul {
+      margin-left: 1.2rem;
+    }
+
+    /* Screenshots */
+    .screenshots img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .screenshots img:hover {
+      transform: scale(1.02);
+    }
+    .screenshots p {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skill {
+      background-color: #0d6efd;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+    .skill:hover {
+      background-color: #1e90ff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .project {
+        padding: 1rem 1.2rem;
+      }
+      .pdf-button {
+        width: 90%;
+      }
+    }
+
+    /* Print Styles – PDF-ready */
+    @media print {
+      body {
+        background-color: white;
+        color: black;
+      }
+      header {
+        background: #0d6efd !important;
+        color: white;
+        -webkit-print-color-adjust: exact; /* Ensure colors print correctly */
+      }
+      .pdf-button {
+        display: none; /* Hide PDF button in print */
+      }
+      a {
+        color: black; /* Links appear black in PDF */
+        text-decoration: none;
+      }
+      .project {
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+      .screenshots img {
+        page-break-inside: avoid;
+      }
+      footer {
+        color: #555;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Juven Legaspi</h1>
+    <p>Software Developer | Full-Stack Developer | System Automation</p>
+  </header>
+
+  <!-- PDF Button -->
+  <button class="pdf-button" onclick="downloadPDF()">Download as PDF</button>
+
+  <div class="container">
+    <!-- About Me -->
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am a software developer with experience in creating and maintaining full-featured systems for educational institutions and corporate environments. I specialize in front-end and back-end development, database design, and workflow automation to deliver efficient, user-friendly software solutions.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects & Achievements</h2>
+
+      <!-- CPC Registrar System -->
+      <div class="project">
+        <h3>Registrar System – Cordova Public College (CPC)</h3>
+        <p><strong>Role:</strong> Programmer / UI & Database Developer</p>
+        <p><strong>Technologies:</strong> Cordova, HTML, CSS, JavaScript, MySQL</p>
+        <ul>
+          <li>Developed the UI and database structure for the Registrar System.</li>
+          <li>Documented system workflows and functionality for easy maintenance.</li>
+          <li>Project awarded <strong>Best Capstone Project</strong> in our batch.</li>
+          <li>Absorbed by CPC to maintain and enhance the system – my first professional experience.</li>
+        </ul>
+      </div>
+
+      <!-- Multiple Module System -->
+      <div class="project">
+        <h3>Multiple Module System – Current Company</h3>
+        <p><strong>Role:</strong> Developer – Accounting Module</p>
+        <p><strong>Technologies:</strong> PHP, JavaScript, MySQL, Laravel (assumed), HTML/CSS</p>
+        <p><strong>Live System:</strong> <a href="https://ipak.tiic.ph/" target="_blank">https://ipak.tiic.ph/</a></p>
+        <ul>
+          <li>Contributed to the multi-module system including Chemical, Packaging, Admin, and TinCan modules.</li>
+          <li>Focused on Admin / Accounting module, creating automation for financial processes.</li>
+        </ul>
+
+        <h4>Key Features Developed:</h4>
+        <ul>
+          <li><strong>Cash Advance System:</strong> Users can request cash advances online; automated approval workflow with email notifications.</li>
+          <li><strong>Request for Payment (RFP) System:</strong> Users submit requests for payments, validated by accounting and approved by heads with email automation.</li>
+          <li><strong>Product Booking System:</strong> Booking workflow integrated with accounting and approval processes.</li>
+        </ul>
+
+        <div class="screenshots">
+          <h4>Screenshots:</h4>
+          <img src="screenshots/cash-advance.png" alt="Cash Advance System">
+          <p>Cash Advance System – Request & Approval Workflow</p>
+
+          <img src="screenshots/rfp-system.png" alt="RFP System">
+          <p>Request for Payment (RFP) System – Approval & Automation</p>
+
+          <img src="screenshots/product-booking.png" alt="Product Booking System">
+          <p>Product Booking System – Admin Module</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills & Tools</h2>
+      <div class="skills">
+        <span class="skill">PHP</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">HTML/CSS</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">Cordova</span>
+        <span class="skill">Laravel</span>
+        <span class="skill">UI Development</span>
+        <span class="skill">Database Design</span>
+        <span class="skill">Workflow Automation</span>
+        <span class="skill">System Documentation</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Juven Legaspi | Email: <a href="mailto:youremail@example.com">youremail@example.com</a>
+  </footer>
+
+  <!-- JavaScript to download PDF -->
+  <script>
+    function downloadPDF() {
+      window.print();
+    }
+  </script>
+</body>
+</html>
